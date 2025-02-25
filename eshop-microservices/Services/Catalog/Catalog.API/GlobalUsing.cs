@@ -9,3 +9,5 @@ global using Marten;
 global using FluentValidation;
 
 global using Catalog.API.Exceptions;
+
+global using BuildingBlocks.Behaviors;
