@@ -6,3 +6,6 @@ global using MediatR;
 global using FluentValidation;
 global using BuildingBlocks.Behaviors;
 global using Microsoft.AspNetCore.Mvc;
+global using BuildingBlocks.Exceptions;
+global using Basket.API.Exceptions;
+global using Marten;
