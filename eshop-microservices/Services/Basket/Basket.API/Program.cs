@@ -1,3 +1,4 @@
+using BuildingBlocks.Exceptions.Handler;
 using Weasel.Core;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -20,8 +21,11 @@ builder.Services.AddMarten(opts =>
 
 builder.Services.AddScoped<IBasketRepository, BasketRepository>();
 
+builder.Services.AddExceptionHandler<CustomExceptionHandler>();
+
 var app = builder.Build();
 
 app.MapCarter();
+app.UseExceptionHandler(_ => { });
 
 app.Run();
